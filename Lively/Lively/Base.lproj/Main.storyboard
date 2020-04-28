@@ -1,24 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Lively" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57f-Bg-fSa" userLabel="listingsContainerView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <segue destination="bHd-hg-cUs" kind="embed" id="AqS-jk-0gz"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTH-1m-5W9" userLabel="mapContainerView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <segue destination="Z2z-Re-xXX" kind="embed" id="0Fd-tK-Fe6"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4wT-Qw-whb">
+                                <rect key="frame" x="139.5" y="94" width="135" height="32"/>
+                                <segments>
+                                    <segment title="Map"/>
+                                    <segment title="Listings"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="Q7s-lb-up1"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="57f-Bg-fSa" secondAttribute="trailing" id="0SG-ck-Wxz"/>
+                            <constraint firstItem="57f-Bg-fSa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="421-eo-0GH"/>
+                            <constraint firstItem="4wT-Qw-whb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C9L-hc-1pP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nTH-1m-5W9" secondAttribute="trailing" id="FJG-Ue-pdH"/>
+                            <constraint firstItem="57f-Bg-fSa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MtP-s4-FOs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nTH-1m-5W9" secondAttribute="bottom" id="SGb-D5-H84"/>
+                            <constraint firstItem="4wT-Qw-whb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Zoe-0T-ONx"/>
+                            <constraint firstItem="nTH-1m-5W9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="azE-sE-YP3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="57f-Bg-fSa" secondAttribute="bottom" id="eG6-sT-2xD"/>
+                            <constraint firstItem="nTH-1m-5W9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hMJ-DE-HaG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="listingsContainer" destination="57f-Bg-fSa" id="OQL-aQ-Qzd"/>
+                        <outlet property="mapContainer" destination="nTH-1m-5W9" id="YZf-KI-xdW"/>
+                        <outlet property="selectionSegment" destination="4wT-Qw-whb" id="XDR-3g-n0b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Listings View Controller-->
+        <scene sceneID="QdM-6l-1d5">
+            <objects>
+                <viewController id="bHd-hg-cUs" customClass="ListingsViewController" customModule="Lively" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MHF-go-rxu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is Listings Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66R-lZ-s9E">
+                                <rect key="frame" x="110.5" y="200" width="193" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="66R-lZ-s9E" firstAttribute="top" secondItem="MHF-go-rxu" secondAttribute="top" constant="200" id="jWM-Oi-eub"/>
+                            <constraint firstItem="66R-lZ-s9E" firstAttribute="centerX" secondItem="MHF-go-rxu" secondAttribute="centerX" id="nxB-eO-ydz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="laJ-r8-0E4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="-48"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="opU-iP-xyu">
+            <objects>
+                <viewController id="Z2z-Re-xXX" customClass="MapViewController" customModule="Lively" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jbp-iw-ZoC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is Map Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHH-kj-IkH">
+                                <rect key="frame" x="123.5" y="200" width="167" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EHH-kj-IkH" firstAttribute="top" secondItem="Jbp-iw-ZoC" secondAttribute="top" constant="200" id="KdC-99-XsX"/>
+                            <constraint firstItem="EHH-kj-IkH" firstAttribute="centerX" secondItem="Jbp-iw-ZoC" secondAttribute="centerX" id="YBh-Gn-k0B"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQ0-5N-nh1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="601"/>
         </scene>
     </scenes>
 </document>
