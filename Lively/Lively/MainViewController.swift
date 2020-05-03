@@ -13,10 +13,20 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mapContainer: UIView!
     @IBOutlet weak var listingsContainer: UIView!
     @IBOutlet weak var selectionSegment: UISegmentedControl!
+    var window :UIWindow = UIApplication.shared.keyWindow!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let button = UIButton.init(type: .custom)
+        
+        button.frame = CGRect.init(x: window.frame.size.width/2 - 25, y: window.frame.size.height - 80, width: 50, height: 50)
+        button.setBackgroundImage(UIImage.init(named: "plus"), for: .normal)
+        window.addSubview(button)
+        window.windowLevel = UIWindow.Level(rawValue: 1)
+
+
     }
     
     @IBAction func segmentClick(_ sender: Any) {

@@ -6,15 +6,19 @@
 //  Copyright © 2020 Dineshkumar kothuri. All rights reserved.
 //
 
+
+
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var emailTf: UITextField!
     
     @IBOutlet weak var paswdTf: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTf.delegate = self
+        paswdTf.delegate = self
      
         
         
@@ -22,7 +26,18 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func signInCLick(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(identifier: "tabBarVC") as! UITabBarController
+        vc.modalPresentationStyle = .fullScreen
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()        
+    }
+    
+    
     /*
     // MARK: - Navigation
 
