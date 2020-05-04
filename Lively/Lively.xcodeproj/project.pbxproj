@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F4A5ECF24601914006AE281 /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A5ECE24601914006AE281 /* ListingsViewController.swift */; };
+		8F4A5ED124601AFB006AE281 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A5ED024601AFB006AE281 /* ListTableViewCell.swift */; };
 		8F5DA89624583E74002FACC6 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5DA89424583E74002FACC6 /* ListCollectionViewCell.swift */; };
 		8F5DA89924584EB1002FACC6 /* ikkk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F5DA89824584EB1002FACC6 /* ikkk.jpg */; };
 		8F5DA89B24597F16002FACC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5DA89A24597F16002FACC6 /* LoginViewController.swift */; };
@@ -20,7 +22,7 @@
 		A81E90B3245EE05100260476 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E90B2245EE05100260476 /* CustomAnnotationView.swift */; };
 		A81E90B5245EE84400260476 /* bgWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = A81E90B4245EE84400260476 /* bgWhite.png */; };
 		A840CA3C2457F96E0096528F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A840CA3B2457F96E0096528F /* MainViewController.swift */; };
-		A840CA3E2457F97E0096528F /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A840CA3D2457F97E0096528F /* ListingsViewController.swift */; };
+		A840CA3E2457F97E0096528F /* CitiesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A840CA3D2457F97E0096528F /* CitiesCollectionViewController.swift */; };
 		A840CA402457F9890096528F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A840CA3F2457F9890096528F /* MapViewController.swift */; };
 		A87E17922457EFDC00FB29F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87E17912457EFDC00FB29F0 /* AppDelegate.swift */; };
 		A87E17942457EFDC00FB29F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87E17932457EFDC00FB29F0 /* SceneDelegate.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F4A5ECE24601914006AE281 /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
+		8F4A5ED024601AFB006AE281 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		8F5DA89424583E74002FACC6 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		8F5DA89824584EB1002FACC6 /* ikkk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ikkk.jpg; sourceTree = "<group>"; };
 		8F5DA89A24597F16002FACC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +48,7 @@
 		A81E90B2245EE05100260476 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		A81E90B4245EE84400260476 /* bgWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgWhite.png; sourceTree = "<group>"; };
 		A840CA3B2457F96E0096528F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		A840CA3D2457F97E0096528F /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
+		A840CA3D2457F97E0096528F /* CitiesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCollectionViewController.swift; sourceTree = "<group>"; };
 		A840CA3F2457F9890096528F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A87E178E2457EFDC00FB29F0 /* Lively.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lively.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A87E17912457EFDC00FB29F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,18 +97,20 @@
 				A87E17912457EFDC00FB29F0 /* AppDelegate.swift */,
 				A87E17932457EFDC00FB29F0 /* SceneDelegate.swift */,
 				A87E17952457EFDC00FB29F0 /* ViewController.swift */,
-				A840CA3D2457F97E0096528F /* ListingsViewController.swift */,
 				A81E90B2245EE05100260476 /* CustomAnnotationView.swift */,
 				A81E90A4245E67DA00260476 /* CityAnnotation.swift */,
 				A81E90A2245E5EAC00260476 /* points.json */,
-				A840CA3B2457F96E0096528F /* MainViewController.swift */,
-				8F5DA89424583E74002FACC6 /* ListCollectionViewCell.swift */,
 				8F5DA89A24597F16002FACC6 /* LoginViewController.swift */,
 				8F5DA89C245A0B8B002FACC6 /* SignUpViewController.swift */,
+				A840CA3B2457F96E0096528F /* MainViewController.swift */,
+				A840CA3D2457F97E0096528F /* CitiesCollectionViewController.swift */,
+				8F5DA89424583E74002FACC6 /* ListCollectionViewCell.swift */,
 				A840CA3F2457F9890096528F /* MapViewController.swift */,
 				A801292E245F1B7B00F0FB9B /* SearchViewController.swift */,
 				A8012930245F1B9400F0FB9B /* LiveViewController.swift */,
 				A8012932245F1B9D00F0FB9B /* ProfileViewController.swift */,
+				8F4A5ECE24601914006AE281 /* ListingsViewController.swift */,
+				8F4A5ED024601AFB006AE281 /* ListTableViewCell.swift */,
 				A87E17972457EFDC00FB29F0 /* Main.storyboard */,
 				A87E179A2457EFDE00FB29F0 /* Assets.xcassets */,
 				A87E179C2457EFDE00FB29F0 /* LaunchScreen.storyboard */,
@@ -196,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A87E17962457EFDC00FB29F0 /* ViewController.swift in Sources */,
+				8F4A5ED124601AFB006AE281 /* ListTableViewCell.swift in Sources */,
 				8F5DA89624583E74002FACC6 /* ListCollectionViewCell.swift in Sources */,
 				A840CA402457F9890096528F /* MapViewController.swift in Sources */,
 				A87E17922457EFDC00FB29F0 /* AppDelegate.swift in Sources */,
@@ -208,7 +215,8 @@
 				8F5DA89D245A0B8B002FACC6 /* SignUpViewController.swift in Sources */,
 				A81E90A5245E67DA00260476 /* CityAnnotation.swift in Sources */,
 				A840CA3C2457F96E0096528F /* MainViewController.swift in Sources */,
-				A840CA3E2457F97E0096528F /* ListingsViewController.swift in Sources */,
+				A840CA3E2457F97E0096528F /* CitiesCollectionViewController.swift in Sources */,
+				8F4A5ECF24601914006AE281 /* ListingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

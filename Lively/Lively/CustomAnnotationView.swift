@@ -16,12 +16,13 @@ class CustomAnnotationView: MKAnnotationView {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
         label.adjustsFontSizeToFitWidth = true
         label.textAlignment = .center
+        label.font = UIFont.init(name: "Helvetica", size: 12)
         label.backgroundColor = .white
         label.text = textNumber
         let img = UIImage.imageWithLabel(label: label)
         self.image = img
         self.layer.cornerRadius = self.layer.frame.size.height/2
-        self.layer.borderWidth = 2
+        self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.black.cgColor
         self.clipsToBounds = true
         

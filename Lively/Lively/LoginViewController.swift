@@ -33,6 +33,14 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         self.present(vc, animated: true, completion: nil)
     }
     
+    @IBAction func registerHereClick(_ sender: Any) {
+        let signVc = self.storyboard?.instantiateViewController(identifier: "signUpVc") as! SignUpViewController
+        signVc.modalPresentationStyle = .fullScreen
+        
+        self.present(signVc, animated: true, completion: nil)
+        
+        
+    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()        
     }
