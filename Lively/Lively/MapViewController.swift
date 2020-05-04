@@ -13,6 +13,7 @@ class MapViewController: UIViewController,MKMapViewDelegate {
     let tapToFind = UITapGestureRecognizer()
     var citiesArr : [CitiesJsonFormat]?
     
+    @IBOutlet weak var listingsContainer: UIView!
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,7 @@ class MapViewController: UIViewController,MKMapViewDelegate {
 //        tapToFind.addTarget(self, action: #selector(findLocationCoordinates))
 //        tapToFind.numberOfTapsRequired = 1;
 //        mapView.addGestureRecognizer(tapToFind)
-                
+        listingsContainer.isHidden = true
         
         /**Loading Json From local File and adding to map**/
         if let path = Bundle.main.path(forResource: "points", ofType: "json"){
@@ -76,6 +77,9 @@ class MapViewController: UIViewController,MKMapViewDelegate {
         
         return nil
         
+    }
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        listingsContainer.isHidden = false
     }
     
         /*

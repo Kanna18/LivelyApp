@@ -10,6 +10,12 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var newAcountLbl: UILabel!
+
+    @IBOutlet weak var paswdTxtF: UITextField!
+    @IBOutlet weak var fullNameTxtF: UITextField!
+    @IBOutlet weak var emailTxtF: UITextField!
+    @IBOutlet weak var signUpWithLbl: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +23,17 @@ class SignUpViewController: UIViewController {
     }
     
 
+    @IBAction func closeBtnActn(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+           
+    }
+    
+    @IBAction func signInBtn(_ sender: Any) {
+         let vc = self.storyboard?.instantiateViewController(identifier: "tabBarVC") as! UITabBarController
+               vc.modalPresentationStyle = .fullScreen
+               
+               self.present(vc, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

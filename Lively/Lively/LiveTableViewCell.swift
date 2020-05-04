@@ -1,5 +1,5 @@
 //
-//  ListTableViewCell.swift
+//  LiveTableViewCell.swift
 //  Lively
 //
 //  Created by sramika mangalapurapu on 5/4/20.
@@ -8,12 +8,8 @@
 
 import UIKit
 
-class ListTableViewCell: UITableViewCell {
-    @IBOutlet weak var imgView: UIImageView!
-    
-    @IBOutlet weak var walkBtn: UIButton!
-    @IBOutlet weak var liveOpnHouseBtn: UIButton!
-    @IBOutlet weak var listTextV: UITextView!
+class LiveTableViewCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

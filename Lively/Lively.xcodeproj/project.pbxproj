@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		8F4A5ECF24601914006AE281 /* ListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A5ECE24601914006AE281 /* ListingsViewController.swift */; };
 		8F4A5ED124601AFB006AE281 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A5ED024601AFB006AE281 /* ListTableViewCell.swift */; };
+		8F4A5ED7246051ED006AE281 /* icons8-heart-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4A5ED6246051EC006AE281 /* icons8-heart-50.png */; };
+		8F4A5ED9246051F8006AE281 /* icons8-share-3-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4A5ED8246051F8006AE281 /* icons8-share-3-50.png */; };
+		8F4A5EDB246052D4006AE281 /* imggghouse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F4A5EDA246052D3006AE281 /* imggghouse.jpg */; };
+		8F4A5EE024605594006AE281 /* LiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A5EDF24605594006AE281 /* LiveTableViewCell.swift */; };
+		8F4A5EE224606100006AE281 /* icons8-macos-close-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4A5EE124606100006AE281 /* icons8-macos-close-32.png */; };
 		8F5DA89624583E74002FACC6 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5DA89424583E74002FACC6 /* ListCollectionViewCell.swift */; };
 		8F5DA89924584EB1002FACC6 /* ikkk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F5DA89824584EB1002FACC6 /* ikkk.jpg */; };
 		8F5DA89B24597F16002FACC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5DA89A24597F16002FACC6 /* LoginViewController.swift */; };
@@ -35,6 +40,11 @@
 /* Begin PBXFileReference section */
 		8F4A5ECE24601914006AE281 /* ListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewController.swift; sourceTree = "<group>"; };
 		8F4A5ED024601AFB006AE281 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		8F4A5ED6246051EC006AE281 /* icons8-heart-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-heart-50.png"; sourceTree = "<group>"; };
+		8F4A5ED8246051F8006AE281 /* icons8-share-3-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-share-3-50.png"; sourceTree = "<group>"; };
+		8F4A5EDA246052D3006AE281 /* imggghouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imggghouse.jpg; sourceTree = "<group>"; };
+		8F4A5EDF24605594006AE281 /* LiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTableViewCell.swift; sourceTree = "<group>"; };
+		8F4A5EE124606100006AE281 /* icons8-macos-close-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-macos-close-32.png"; sourceTree = "<group>"; };
 		8F5DA89424583E74002FACC6 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		8F5DA89824584EB1002FACC6 /* ikkk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ikkk.jpg; sourceTree = "<group>"; };
 		8F5DA89A24597F16002FACC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +81,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F4A5EDC246052DB006AE281 /* Assests */ = {
+			isa = PBXGroup;
+			children = (
+				8F4A5EE124606100006AE281 /* icons8-macos-close-32.png */,
+				8F4A5EDA246052D3006AE281 /* imggghouse.jpg */,
+				8F4A5ED8246051F8006AE281 /* icons8-share-3-50.png */,
+				8F4A5ED6246051EC006AE281 /* icons8-heart-50.png */,
+				8F5DA89824584EB1002FACC6 /* ikkk.jpg */,
+				A81E90B0245E6F5A00260476 /* bgImg.png */,
+				A81E90B4245EE84400260476 /* bgWhite.png */,
+			);
+			path = Assests;
+			sourceTree = "<group>";
+		};
 		A87E17852457EFDC00FB29F0 = {
 			isa = PBXGroup;
 			children = (
@@ -91,9 +115,7 @@
 		A87E17902457EFDC00FB29F0 /* Lively */ = {
 			isa = PBXGroup;
 			children = (
-				8F5DA89824584EB1002FACC6 /* ikkk.jpg */,
-				A81E90B0245E6F5A00260476 /* bgImg.png */,
-				A81E90B4245EE84400260476 /* bgWhite.png */,
+				8F4A5EDC246052DB006AE281 /* Assests */,
 				A87E17912457EFDC00FB29F0 /* AppDelegate.swift */,
 				A87E17932457EFDC00FB29F0 /* SceneDelegate.swift */,
 				A87E17952457EFDC00FB29F0 /* ViewController.swift */,
@@ -108,6 +130,7 @@
 				A840CA3F2457F9890096528F /* MapViewController.swift */,
 				A801292E245F1B7B00F0FB9B /* SearchViewController.swift */,
 				A8012930245F1B9400F0FB9B /* LiveViewController.swift */,
+				8F4A5EDF24605594006AE281 /* LiveTableViewCell.swift */,
 				A8012932245F1B9D00F0FB9B /* ProfileViewController.swift */,
 				8F4A5ECE24601914006AE281 /* ListingsViewController.swift */,
 				8F4A5ED024601AFB006AE281 /* ListTableViewCell.swift */,
@@ -184,11 +207,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4A5ED9246051F8006AE281 /* icons8-share-3-50.png in Resources */,
 				A87E179E2457EFDE00FB29F0 /* LaunchScreen.storyboard in Resources */,
 				8F5DA89924584EB1002FACC6 /* ikkk.jpg in Resources */,
+				8F4A5EE224606100006AE281 /* icons8-macos-close-32.png in Resources */,
 				A87E179B2457EFDE00FB29F0 /* Assets.xcassets in Resources */,
 				A81E90A3245E5EAC00260476 /* points.json in Resources */,
 				A81E90B5245EE84400260476 /* bgWhite.png in Resources */,
+				8F4A5EDB246052D4006AE281 /* imggghouse.jpg in Resources */,
+				8F4A5ED7246051ED006AE281 /* icons8-heart-50.png in Resources */,
 				A81E90B1245E6F5A00260476 /* bgImg.png in Resources */,
 				A87E17992457EFDC00FB29F0 /* Main.storyboard in Resources */,
 			);
@@ -205,6 +232,7 @@
 				8F4A5ED124601AFB006AE281 /* ListTableViewCell.swift in Sources */,
 				8F5DA89624583E74002FACC6 /* ListCollectionViewCell.swift in Sources */,
 				A840CA402457F9890096528F /* MapViewController.swift in Sources */,
+				8F4A5EE024605594006AE281 /* LiveTableViewCell.swift in Sources */,
 				A87E17922457EFDC00FB29F0 /* AppDelegate.swift in Sources */,
 				A8012933245F1B9D00F0FB9B /* ProfileViewController.swift in Sources */,
 				8F5DA89B24597F16002FACC6 /* LoginViewController.swift in Sources */,
