@@ -12,17 +12,17 @@ class MapViewController: UIViewController,MKMapViewDelegate {
     
     let tapToFind = UITapGestureRecognizer()
     var citiesArr : [CitiesJsonFormat]?
+    var listingsVC : ListingsViewController?
     
     @IBOutlet weak var listingsContainer: UIView!
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-//        tapToFind.addTarget(self, action: #selector(findLocationCoordinates))
-//        tapToFind.numberOfTapsRequired = 1;
-//        mapView.addGestureRecognizer(tapToFind)
-        listingsContainer.isHidden = true
-        
+        tapToFind.addTarget(self, action: #selector(findLocationCoordinates))
+        tapToFind.numberOfTapsRequired = 1;
+        mapView.addGestureRecognizer(tapToFind)
+                       
         /**Loading Json From local File and adding to map**/
         if let path = Bundle.main.path(forResource: "points", ofType: "json"){
             do{
@@ -47,8 +47,27 @@ class MapViewController: UIViewController,MKMapViewDelegate {
         
     }
     
-//    @objc func findLocationCoordinates(sender: UITapGestureRecognizer){
-//
+    func manageListingsViewHeight(show minHgt:Bool)  {
+         var frm = CGRect.init(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height/2)
+        if(minHgt){
+            frm.origin.y = self.view.frame.size.height - self.view.frame.size.height/2            
+        }else{
+            frm.origin.y = self.view.frame.size.height
+        }
+        UIView.animate(withDuration: 0.5) {
+           self.listingsContainer.frame = frm
+        }
+        
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.manageListingsViewHeight(show: false)
+                
+    }
+    @objc func findLocationCoordinates(sender: UITapGestureRecognizer){
+
 //        let loc = sender.location(in: mapView)
 //        let coord = mapView.convert(loc, toCoordinateFrom: mapView)
 //        let annot = CityAnnotation.init(coor: coord)
@@ -56,8 +75,9 @@ class MapViewController: UIViewController,MKMapViewDelegate {
 //        annot.title = "HI"
 //        mapView.addAnnotation(annot);
 //        mapView.setCenter(coord, animated: true)
-//
-//    }
+        self.manageListingsViewHeight(show: false)
+
+    }
     
     @IBAction func zoomtoLocation(_ sender: Any) {
         let coordinate = CLLocationCoordinate2DMake(17.3850, 78.4867)
@@ -79,18 +99,23 @@ class MapViewController: UIViewController,MKMapViewDelegate {
         
     }
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        listingsContainer.isHidden = false
+        
+        let anno = view.annotation as! CityAnnotation
+        listingsVC?.noOflistingsLabel.text = "\(anno.numberOfAvailableHouses ?? "") Listings"
+        
+        self.manageListingsViewHeight(show: true)
+ 
     }
     
-        /*
+   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "listingsSegue"{
+            listingsVC = segue.destination as? ListingsViewController
+        }
     }
-    */
 
 }
 

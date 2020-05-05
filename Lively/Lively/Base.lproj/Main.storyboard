@@ -646,10 +646,11 @@
                                     <action selector="zoomtoLocation:" destination="Z2z-Re-xXX" eventType="touchUpInside" id="afu-z9-AAI"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2z-ro-hr7">
-                                <rect key="frame" x="0.0" y="294" width="414" height="475"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k2z-ro-hr7">
+                                <rect key="frame" x="0.0" y="469" width="414" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="5R5-ub-Oca" kind="embed" id="jHe-o9-32S"/>
+                                    <segue destination="5R5-ub-Oca" kind="embed" identifier="listingsSegue" id="jHe-o9-32S"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -657,11 +658,7 @@
                         <constraints>
                             <constraint firstItem="GfN-BM-rPo" firstAttribute="trailing" secondItem="doE-aS-oDP" secondAttribute="trailing" id="414-9J-sw4"/>
                             <constraint firstItem="GfN-BM-rPo" firstAttribute="bottom" secondItem="doE-aS-oDP" secondAttribute="bottom" id="4Ec-jb-MEJ"/>
-                            <constraint firstItem="GfN-BM-rPo" firstAttribute="bottom" secondItem="k2z-ro-hr7" secondAttribute="bottom" id="ACy-i1-gon"/>
-                            <constraint firstItem="k2z-ro-hr7" firstAttribute="top" secondItem="GfN-BM-rPo" secondAttribute="top" constant="250" id="Bgu-Ft-i64"/>
                             <constraint firstItem="doE-aS-oDP" firstAttribute="leading" secondItem="GfN-BM-rPo" secondAttribute="leading" id="JeZ-Ny-rqS"/>
-                            <constraint firstItem="k2z-ro-hr7" firstAttribute="leading" secondItem="GfN-BM-rPo" secondAttribute="leading" id="QjT-Ew-gCh"/>
-                            <constraint firstItem="GfN-BM-rPo" firstAttribute="trailing" secondItem="k2z-ro-hr7" secondAttribute="trailing" id="axl-ZI-1BT"/>
                             <constraint firstItem="doE-aS-oDP" firstAttribute="top" secondItem="GfN-BM-rPo" secondAttribute="top" id="gF0-vb-aA7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GfN-BM-rPo"/>
@@ -680,11 +677,11 @@
             <objects>
                 <viewController storyboardIdentifier="listingsVC" id="5R5-ub-Oca" customClass="ListingsViewController" customModule="Lively" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DOP-OU-VZs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="475"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mp1-dG-kL4">
-                                <rect key="frame" x="0.0" y="84" width="414" height="391"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="216"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="116" id="ssW-oH-Z08" customClass="ListTableViewCell" customModule="Lively" customModuleProvider="target">
@@ -770,17 +767,26 @@
                                     <outlet property="delegate" destination="5R5-ub-Oca" id="6Ic-zw-0nU"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nx1-6l-J1J">
+                                <rect key="frame" x="186" y="20" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Nx1-6l-J1J" firstAttribute="centerX" secondItem="DOP-OU-VZs" secondAttribute="centerX" id="7pD-4X-AKQ"/>
                             <constraint firstAttribute="bottom" secondItem="Mp1-dG-kL4" secondAttribute="bottom" id="DHt-ck-WdB"/>
                             <constraint firstItem="Mp1-dG-kL4" firstAttribute="top" secondItem="2RG-9K-2WX" secondAttribute="top" constant="40" id="GlF-oU-jmM"/>
+                            <constraint firstItem="Nx1-6l-J1J" firstAttribute="top" secondItem="DOP-OU-VZs" secondAttribute="top" constant="20" id="PM2-B1-Aaa"/>
                             <constraint firstItem="Mp1-dG-kL4" firstAttribute="leading" secondItem="2RG-9K-2WX" secondAttribute="leading" id="egV-KW-zAi"/>
                             <constraint firstItem="Mp1-dG-kL4" firstAttribute="trailing" secondItem="2RG-9K-2WX" secondAttribute="trailing" id="zpL-d9-kQP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2RG-9K-2WX"/>
                     </view>
                     <connections>
+                        <outlet property="noOflistingsLabel" destination="Nx1-6l-J1J" id="XZk-0q-lQ0"/>
                         <outlet property="tableViewData" destination="Mp1-dG-kL4" id="r5z-Fv-HRM"/>
                     </connections>
                 </viewController>

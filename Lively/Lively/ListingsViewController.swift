@@ -10,6 +10,7 @@ import UIKit
 
 class ListingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var noOflistingsLabel: UILabel!
     @IBOutlet weak var tableViewData: UITableView!
     var cellIdentifier = "cell"
 
