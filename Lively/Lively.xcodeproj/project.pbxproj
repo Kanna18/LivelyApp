@@ -40,6 +40,7 @@
 		A87E17992457EFDC00FB29F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A87E17972457EFDC00FB29F0 /* Main.storyboard */; };
 		A87E179B2457EFDE00FB29F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A87E179A2457EFDE00FB29F0 /* Assets.xcassets */; };
 		A87E179E2457EFDE00FB29F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A87E179C2457EFDE00FB29F0 /* LaunchScreen.storyboard */; };
+		A8F9502C2461BA160096E471 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F9502B2461BA160096E471 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,8 @@
 		A87E179A2457EFDE00FB29F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A87E179D2457EFDE00FB29F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A87E179F2457EFDE00FB29F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8F9502A2461BA160096E471 /* Lively.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lively.entitlements; sourceTree = "<group>"; };
+		A8F9502B2461BA160096E471 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F9502C2461BA160096E471 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,10 +115,10 @@
 		A87E17852457EFDC00FB29F0 = {
 			isa = PBXGroup;
 			children = (
-				8F4A5EE324606DC1006AE281 /* Listings.json */,
 				A87E17902457EFDC00FB29F0 /* Lively */,
 				A87E178F2457EFDC00FB29F0 /* Products */,
 				D21EB25299BA6A201D1B91BF /* Pods */,
+				A8F950272461B3D60096E471 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +133,7 @@
 		A87E17902457EFDC00FB29F0 /* Lively */ = {
 			isa = PBXGroup;
 			children = (
+				A8F9502A2461BA160096E471 /* Lively.entitlements */,
 				8F4A5EDC246052DB006AE281 /* Assests */,
 				A87E17912457EFDC00FB29F0 /* AppDelegate.swift */,
 				A87E17932457EFDC00FB29F0 /* SceneDelegate.swift */,
@@ -136,6 +141,7 @@
 				A81E90B2245EE05100260476 /* CustomAnnotationView.swift */,
 				A81E90A4245E67DA00260476 /* CityAnnotation.swift */,
 				A81E90A2245E5EAC00260476 /* points.json */,
+				8F4A5EE324606DC1006AE281 /* Listings.json */,
 				8F5DA89A24597F16002FACC6 /* LoginViewController.swift */,
 				8F5DA89C245A0B8B002FACC6 /* SignUpViewController.swift */,
 				A840CA3B2457F96E0096528F /* MainViewController.swift */,
@@ -155,6 +161,14 @@
 				A87E179F2457EFDE00FB29F0 /* Info.plist */,
 			);
 			path = Lively;
+			sourceTree = "<group>";
+		};
+		A8F950272461B3D60096E471 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8F9502B2461BA160096E471 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D21EB25299BA6A201D1B91BF /* Pods */ = {
@@ -408,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Lively/Lively.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VCLL7BM84V;
 				INFOPLIST_FILE = Lively/Info.plist;
@@ -426,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Lively/Lively.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VCLL7BM84V;
 				INFOPLIST_FILE = Lively/Info.plist;

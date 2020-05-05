@@ -14,10 +14,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailMainTV: UITextView!
     @IBOutlet weak var detailParaTV: UITextView!
     @IBOutlet weak var backBtn: UIButton!
+    var detailedObj : PropertyJsonFormat? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.detailMainTV.text = "\((self.detailedObj?.flat)!) \((self.detailedObj?.street)!) \n \((self.detailedObj?.city)!) \((self.detailedObj?.cost)!) \n \((self.detailedObj?.dimensions)!)"
+        self.detailParaTV.text = self.detailedObj?.description
     }
     
     @IBAction func bookBtnACtion(_ sender: Any) {

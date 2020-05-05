@@ -38,12 +38,11 @@ class MapViewController: UIViewController,MKMapViewDelegate {
                     annot.title = mpObj.name
                     mapView.addAnnotation(annot);
                     mapView.setCenter(coord, animated: true)
-
-                    
                 }
             }
             
         }
+        self.manageListingsViewHeight(show: false)
         
     }
     
@@ -63,7 +62,7 @@ class MapViewController: UIViewController,MKMapViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        self.manageListingsViewHeight(show: false)
+        
                 
     }
     @objc func findLocationCoordinates(sender: UITapGestureRecognizer){
@@ -102,10 +101,16 @@ class MapViewController: UIViewController,MKMapViewDelegate {
         
         let anno = view.annotation as! CityAnnotation
         listingsVC?.noOflistingsLabel.text = "\(anno.numberOfAvailableHouses ?? "") Listings"
-        
+        listingsVC?.backButton.isHidden = true
         self.manageListingsViewHeight(show: true)
+        mapView.deselectAnnotation(anno, animated: false)
  
     }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        
+    }
+    
     
    
     // MARK: - Navigation
@@ -142,3 +147,5 @@ struct CitiesJsonFormat {
         numberOfProperties = dict["numberOfProperties"] as! Int
     }
 }
+
+

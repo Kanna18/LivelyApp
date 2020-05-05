@@ -11,6 +11,7 @@ import UIKit
 class CitiesCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
     
     @IBOutlet weak var listCollectnView: UICollectionView!
+    var citiesArr = [CitiesJsonFormat]()
      var allImage: [String]! = Array.init(repeating: "ikkk.jpg", count: 20)
      var mainView = MainViewController()
     override func viewDidLoad() {
@@ -19,7 +20,7 @@ class CitiesCollectionViewController: UIViewController, UICollectionViewDataSour
        // mainView.selectionSegment.isHidden = true
        // mainView.listingsContainer.isHidden = true
        
-               
+        self.getJsonData()
         let screenWidth = UIScreen.main.bounds.width
            let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
            layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 10, right: 0)
@@ -33,6 +34,23 @@ class CitiesCollectionViewController: UIViewController, UICollectionViewDataSour
         
     }
     
+    func getJsonData() {
+        /**Loading Json From local File and adding to map**/
+        if let path = Bundle.main.path(forResource: "points", ofType: "json"){
+            do{
+                let url = URL.init(fileURLWithPath: path)
+                let data = try? Data.init(contentsOf: url, options: .mappedIfSafe)
+                let json = try? JSONSerialization.jsonObject(with: data!) as? [Dictionary<String,Any>]
+                for item in json! {
+                    let mpObj = CitiesJsonFormat.init(dict: item)
+                    citiesArr.append(mpObj)
+                }
+                DispatchQueue.main.async {self.listCollectnView.reloadData()}                
+            }
+            
+        }
+    }
+    
     //1
       let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
           
@@ -44,7 +62,7 @@ class CitiesCollectionViewController: UIViewController, UICollectionViewDataSour
 
           // tell the collection view how many cells to make
           func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return allImage.count
+            return citiesArr.count
           }
 
           
@@ -75,10 +93,11 @@ class CitiesCollectionViewController: UIViewController, UICollectionViewDataSour
               // get a reference to our storyboard cell
               let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! ListCollectionViewCell
 
-            
+            let obj = citiesArr[indexPath.row]
             let image = UIImage(named: allImage[indexPath.row])
             cell.imgView.image = image
             cell.backgroundColor = .red;
+            cell.nameLablel.text = obj.name;
             //cell.contentView.addSubview(imVie)
               //cell.myLabel.text = self.items[indexPath.item]
               //cell.backgroundColor = UIColor.cyan
@@ -88,17 +107,14 @@ class CitiesCollectionViewController: UIViewController, UICollectionViewDataSour
     
 
           // MARK: - UICollectionViewDelegate protocol
-
-          func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-              // handle tap events
-            
-            
-              let listingsVC = self.storyboard?.instantiateViewController(identifier: "listingsVC") as! ListingsViewController
-              listingsVC.modalPresentationStyle = .fullScreen
-              
-              self.present(listingsVC, animated: true, completion: nil)
-          }
-      
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let obj = citiesArr[indexPath.row]
+               let listingsVC = self.storyboard?.instantiateViewController(identifier: "listingsVC") as! ListingsViewController
+               listingsVC.modalPresentationStyle = .fullScreen
+               listingsVC.listingsCount = "\(String(obj.numberOfProperties)) Listings"
+               self.present(listingsVC, animated: true, completion: nil)
+    }
+   
 
     /*
     // MARK: - Navigation

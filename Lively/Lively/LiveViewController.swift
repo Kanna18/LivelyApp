@@ -21,7 +21,7 @@ class LiveViewController: UIViewController , UITableViewDelegate, UITableViewDat
         // Do any additional setup after loading the view.
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 380;//Choose your custom row height
+        return 388;//Choose your custom row height
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
