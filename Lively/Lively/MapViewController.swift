@@ -11,8 +11,10 @@ import MapKit
 class MapViewController: UIViewController,MKMapViewDelegate {
     
     let tapToFind = UITapGestureRecognizer()
+    let panGest = UIPanGestureRecognizer()
     var citiesArr : [CitiesJsonFormat]?
     var listingsVC : ListingsViewController?
+    var initialCenter : CGPoint?
     
     @IBOutlet weak var listingsContainer: UIView!
     @IBOutlet weak var mapView: MKMapView!
@@ -22,6 +24,9 @@ class MapViewController: UIViewController,MKMapViewDelegate {
         tapToFind.addTarget(self, action: #selector(findLocationCoordinates))
         tapToFind.numberOfTapsRequired = 1;
         mapView.addGestureRecognizer(tapToFind)
+        
+//        panGest.addTarget(self, action: #selector(moveListingsUI))
+//        self.listingsContainer.addGestureRecognizer(panGest)
                        
         /**Loading Json From local File and adding to map**/
         if let path = Bundle.main.path(forResource: "points", ofType: "json"){
@@ -45,6 +50,28 @@ class MapViewController: UIViewController,MKMapViewDelegate {
         self.manageListingsViewHeight(show: false)
         
     }
+    
+//    @objc func moveListingsUI(_ gestureRecognizer:UIPanGestureRecognizer)  {
+//        guard gestureRecognizer.view != nil else {return}
+//        let piece = gestureRecognizer.view!
+//        // Get the changes in the X and Y directions relative to
+//        // the superview's coordinate space.
+//        let translation = gestureRecognizer.translation(in: piece.superview)
+//        if gestureRecognizer.state == .began {
+//           // Save the view's original position.
+//            self.initialCenter = self.listingsContainer.frame.origin
+//        }
+//           // Update the position for the .began, .changed, and .ended states
+//        if gestureRecognizer.state != .cancelled {
+//           // Add the X and Y translation to the view's original position.
+//            let newCenter = CGPoint(x: self.initialCenter!.x + translation.x, y: initialCenter!.y + translation.y)
+//           piece.center = newCenter
+//        }
+//        else {
+//           // On cancellation, return the piece to its original location.
+//            piece.center = initialCenter!
+//        }
+//    }
     
     func manageListingsViewHeight(show minHgt:Bool)  {
          var frm = CGRect.init(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height/2)
