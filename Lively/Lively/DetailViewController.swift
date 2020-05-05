@@ -26,6 +26,7 @@ class DetailViewController: UIViewController {
     @IBAction func mapBtnAction(_ sender: Any) {
     }
     @IBAction func backBtnAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
      @IBAction func flagBtnAction(_ sender: Any) {

@@ -148,11 +148,11 @@
 				A8012932245F1B9D00F0FB9B /* ProfileViewController.swift */,
 				8F4A5ECE24601914006AE281 /* ListingsViewController.swift */,
 				8F4A5ED024601AFB006AE281 /* ListTableViewCell.swift */,
+				8F4A5EE524614958006AE281 /* DetailViewController.swift */,
 				A87E17972457EFDC00FB29F0 /* Main.storyboard */,
 				A87E179A2457EFDE00FB29F0 /* Assets.xcassets */,
 				A87E179C2457EFDE00FB29F0 /* LaunchScreen.storyboard */,
 				A87E179F2457EFDE00FB29F0 /* Info.plist */,
-				8F4A5EE524614958006AE281 /* DetailViewController.swift */,
 			);
 			path = Lively;
 			sourceTree = "<group>";

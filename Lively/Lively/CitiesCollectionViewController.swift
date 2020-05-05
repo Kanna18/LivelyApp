@@ -93,10 +93,10 @@ class CitiesCollectionViewController: UIViewController, UICollectionViewDataSour
               // handle tap events
             
             
-              let detailVc = self.storyboard?.instantiateViewController(identifier: "detailVc") as! DetailViewController
-              detailVc.modalPresentationStyle = .fullScreen
+              let listingsVC = self.storyboard?.instantiateViewController(identifier: "listingsVC") as! ListingsViewController
+              listingsVC.modalPresentationStyle = .fullScreen
               
-              self.present(detailVc, animated: true, completion: nil)
+              self.present(listingsVC, animated: true, completion: nil)
           }
       
 

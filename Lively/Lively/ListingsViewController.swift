@@ -37,6 +37,12 @@ class ListingsViewController: UIViewController, UITableViewDelegate, UITableView
          return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc  = self.storyboard?.instantiateViewController(identifier: "detailVC") as! DetailViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+
+    }
     /*
     // MARK: - Navigation
 
