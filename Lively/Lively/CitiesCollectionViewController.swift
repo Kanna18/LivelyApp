@@ -91,7 +91,12 @@ class CitiesCollectionViewController: UIViewController, UICollectionViewDataSour
 
           func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
               // handle tap events
-              print("You selected cell #\(indexPath.item)!")
+            
+            
+              let detailVc = self.storyboard?.instantiateViewController(identifier: "detailVc") as! DetailViewController
+              detailVc.modalPresentationStyle = .fullScreen
+              
+              self.present(detailVc, animated: true, completion: nil)
           }
       
 
