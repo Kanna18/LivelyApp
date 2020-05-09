@@ -84,7 +84,6 @@ class MapViewController: UIViewController,MKMapViewDelegate {
            self.listingsContainer.frame = frm
         }
         
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)

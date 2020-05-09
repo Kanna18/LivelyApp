@@ -19,6 +19,8 @@
 		8F4A5EE824615322006AE281 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4A5EE724615322006AE281 /* book.png */; };
 		8F4A5EEA2461532D006AE281 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4A5EE92461532D006AE281 /* map.png */; };
 		8F4A5EEC24615336006AE281 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4A5EEB24615336006AE281 /* flag.png */; };
+		8F4A5EEE2462FE37006AE281 /* DetailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A5EED2462FE37006AE281 /* DetailMapViewController.swift */; };
+		8F4A5EF024631A4E006AE281 /* placeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4A5EEF24631A4D006AE281 /* placeicon.png */; };
 		8F5DA89624583E74002FACC6 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5DA89424583E74002FACC6 /* ListCollectionViewCell.swift */; };
 		8F5DA89924584EB1002FACC6 /* ikkk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F5DA89824584EB1002FACC6 /* ikkk.jpg */; };
 		8F5DA89B24597F16002FACC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5DA89A24597F16002FACC6 /* LoginViewController.swift */; };
@@ -56,6 +58,8 @@
 		8F4A5EE724615322006AE281 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
 		8F4A5EE92461532D006AE281 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		8F4A5EEB24615336006AE281 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
+		8F4A5EED2462FE37006AE281 /* DetailMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMapViewController.swift; sourceTree = "<group>"; };
+		8F4A5EEF24631A4D006AE281 /* placeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeicon.png; sourceTree = "<group>"; };
 		8F5DA89424583E74002FACC6 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		8F5DA89824584EB1002FACC6 /* ikkk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ikkk.jpg; sourceTree = "<group>"; };
 		8F5DA89A24597F16002FACC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 		8F4A5EDC246052DB006AE281 /* Assests */ = {
 			isa = PBXGroup;
 			children = (
+				8F4A5EEF24631A4D006AE281 /* placeicon.png */,
 				8F4A5EEB24615336006AE281 /* flag.png */,
 				8F4A5EE92461532D006AE281 /* map.png */,
 				8F4A5EE724615322006AE281 /* book.png */,
@@ -155,6 +160,7 @@
 				8F4A5ECE24601914006AE281 /* ListingsViewController.swift */,
 				8F4A5ED024601AFB006AE281 /* ListTableViewCell.swift */,
 				8F4A5EE524614958006AE281 /* DetailViewController.swift */,
+				8F4A5EED2462FE37006AE281 /* DetailMapViewController.swift */,
 				A87E17972457EFDC00FB29F0 /* Main.storyboard */,
 				A87E179A2457EFDE00FB29F0 /* Assets.xcassets */,
 				A87E179C2457EFDE00FB29F0 /* LaunchScreen.storyboard */,
@@ -250,6 +256,7 @@
 				8F4A5EEC24615336006AE281 /* flag.png in Resources */,
 				A81E90B1245E6F5A00260476 /* bgImg.png in Resources */,
 				8F4A5EE424606DC1006AE281 /* Listings.json in Resources */,
+				8F4A5EF024631A4E006AE281 /* placeicon.png in Resources */,
 				A87E17992457EFDC00FB29F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +272,7 @@
 				8F4A5ED124601AFB006AE281 /* ListTableViewCell.swift in Sources */,
 				8F5DA89624583E74002FACC6 /* ListCollectionViewCell.swift in Sources */,
 				A840CA402457F9890096528F /* MapViewController.swift in Sources */,
+				8F4A5EEE2462FE37006AE281 /* DetailMapViewController.swift in Sources */,
 				8F4A5EE024605594006AE281 /* LiveTableViewCell.swift in Sources */,
 				A87E17922457EFDC00FB29F0 /* AppDelegate.swift in Sources */,
 				A8012933245F1B9D00F0FB9B /* ProfileViewController.swift in Sources */,

@@ -28,6 +28,10 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func mapBtnAction(_ sender: Any) {
+        let detailMapVc = self.storyboard?.instantiateViewController(identifier: "detailMapVc") as! DetailMapViewController
+        detailMapVc.modalPresentationStyle = .fullScreen
+        detailMapVc.detailedObj = detailedObj
+        self.present(detailMapVc, animated: true, completion: nil)
     }
     @IBAction func backBtnAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

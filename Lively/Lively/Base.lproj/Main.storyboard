@@ -537,7 +537,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imggghouse.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Wgd-Bg-xBA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                                    <rect key="frame" x="15" y="0.0" width="384" height="220"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="220" id="WIP-vZ-91B">
                                                             <variation key="heightClass=regular-widthClass=regular" constant="400"/>
@@ -582,7 +582,7 @@
                                                 <constraint firstItem="Gw0-cx-i7g" firstAttribute="top" secondItem="Wgd-Bg-xBA" secondAttribute="bottom" constant="10" id="ASn-Cj-EIE"/>
                                                 <constraint firstItem="ICq-hJ-fNt" firstAttribute="leading" secondItem="Pq8-Bh-pqV" secondAttribute="leading" constant="15" id="Bbi-kd-cSu"/>
                                                 <constraint firstItem="ICq-hJ-fNt" firstAttribute="top" secondItem="uX8-4U-gY1" secondAttribute="bottom" constant="20" id="E32-07-J2v"/>
-                                                <constraint firstAttribute="trailing" secondItem="Wgd-Bg-xBA" secondAttribute="trailing" id="IxN-g6-4MK"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wgd-Bg-xBA" secondAttribute="trailing" constant="15" id="IxN-g6-4MK"/>
                                                 <constraint firstItem="uX8-4U-gY1" firstAttribute="trailing" secondItem="Gw0-cx-i7g" secondAttribute="trailing" id="ScL-66-BE6"/>
                                                 <constraint firstItem="uX8-4U-gY1" firstAttribute="top" secondItem="Gw0-cx-i7g" secondAttribute="bottom" constant="10" id="Wf2-Rz-KZ4"/>
                                                 <constraint firstAttribute="trailing" secondItem="Gw0-cx-i7g" secondAttribute="trailing" id="gW8-8b-Ls3"/>
@@ -592,9 +592,14 @@
                                                 <constraint firstItem="Wgd-Bg-xBA" firstAttribute="top" secondItem="Pq8-Bh-pqV" secondAttribute="top" id="o38-sG-aU1"/>
                                                 <constraint firstItem="uX8-4U-gY1" firstAttribute="leading" secondItem="Pq8-Bh-pqV" secondAttribute="leading" constant="15" id="qVR-Lc-hUp"/>
                                                 <constraint firstItem="Uy8-3j-EBX" firstAttribute="centerY" secondItem="ICq-hJ-fNt" secondAttribute="centerY" id="w4U-AA-tck"/>
-                                                <constraint firstItem="Wgd-Bg-xBA" firstAttribute="leading" secondItem="Pq8-Bh-pqV" secondAttribute="leading" id="xpq-vD-Afw"/>
+                                                <constraint firstItem="Wgd-Bg-xBA" firstAttribute="leading" secondItem="Pq8-Bh-pqV" secondAttribute="leading" constant="15" id="xpq-vD-Afw"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressTv" destination="Gw0-cx-i7g" id="g86-Pz-3NO"/>
+                                            <outlet property="datelbl" destination="uX8-4U-gY1" id="f0M-Og-FW4"/>
+                                            <outlet property="imgView" destination="Wgd-Bg-xBA" id="aYx-Za-hU8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -773,6 +778,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kpv-ry-sCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2523" y="60"/>
+        </scene>
+        <!--Detail Map View Controller-->
+        <scene sceneID="bhl-A2-Sqe">
+            <objects>
+                <viewController storyboardIdentifier="detailMapVc" id="D9w-Zc-cBw" customClass="DetailMapViewController" customModule="Lively" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HXb-PY-n90">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EQF-Ia-Jrc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3F-dN-3S7">
+                                <rect key="frame" x="36" y="73" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBtnAction:" destination="D9w-Zc-cBw" eventType="touchUpInside" id="jlY-XQ-1Tl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EQF-Ia-Jrc" firstAttribute="top" secondItem="4ww-KZ-05h" secondAttribute="top" id="Fan-xD-ZJt"/>
+                            <constraint firstItem="4ww-KZ-05h" firstAttribute="trailing" secondItem="EQF-Ia-Jrc" secondAttribute="trailing" id="M4j-ce-cIT"/>
+                            <constraint firstItem="4ww-KZ-05h" firstAttribute="bottom" secondItem="EQF-Ia-Jrc" secondAttribute="bottom" id="OXe-37-oLw"/>
+                            <constraint firstItem="EQF-Ia-Jrc" firstAttribute="leading" secondItem="4ww-KZ-05h" secondAttribute="leading" id="o3p-nb-c8P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4ww-KZ-05h"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailMapView" destination="EQF-Ia-Jrc" id="Xyh-D1-KmI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qh4-pI-TY7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3312" y="35"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="opU-iP-xyu">
