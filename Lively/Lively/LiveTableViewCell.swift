@@ -10,6 +10,7 @@ import UIKit
 
 class LiveTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var imgView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -105,7 +105,7 @@ class MapViewController: UIViewController,MKMapViewDelegate {
     }
     
     @IBAction func zoomtoLocation(_ sender: Any) {
-        let coordinate = CLLocationCoordinate2DMake(17.3850, 78.4867)
+        let coordinate = CLLocationCoordinate2DMake(43.000000, -75.000000)
         let region = MKCoordinateRegion.init(center: coordinate, latitudinalMeters: 0.5 , longitudinalMeters: 0.5)
         mapView.setRegion(region, animated: true)
     }

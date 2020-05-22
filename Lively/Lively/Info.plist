@@ -73,5 +73,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Lively wolud like to access your camera for video call features.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Lively would like to access microphone </string>
 </dict>
 </plist>

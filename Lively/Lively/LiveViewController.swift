@@ -7,12 +7,14 @@
 //
 
 import UIKit
-
+import TwilioVideo
 class LiveViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var liveOpenLbl: UILabel!
     @IBOutlet weak var localtyLbl: UILabel!
     var liveCellIdentifier = "liveCell"
     @IBOutlet weak var liveTableView: UITableView!
+        
+
     override func viewDidLoad() {
         liveTableView.delegate = self
         liveTableView.dataSource = self
@@ -20,6 +22,16 @@ class LiveViewController: UIViewController , UITableViewDelegate, UITableViewDat
 
         // Do any additional setup after loading the view.
     }
+    
+
+    @objc func createARoom(sender:UIButton){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "TwilioViewController") as! TwilioCallViewController
+        let nav = UINavigationController.init(rootViewController: vc)
+        self.present(nav, animated: true, completion: nil)
+        
+    }
+
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 388;//Choose your custom row height
     }
@@ -32,7 +44,8 @@ class LiveViewController: UIViewController , UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
          let cell = tableView.dequeueReusableCell(withIdentifier: liveCellIdentifier, for: indexPath) as! LiveTableViewCell
-         
+    
+        cell.callButton.addTarget(self, action: #selector(createARoom(sender:)), for: .touchUpInside)
          return cell
     }
     

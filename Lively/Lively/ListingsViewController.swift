@@ -102,7 +102,6 @@ struct PropertyJsonFormat {
     var description : String
    
    init(dict : Dictionary<String,Any>) {
-        
 
         lat = dict["lat"] as! String
         lon = dict["lon"] as! String
@@ -120,6 +119,6 @@ struct PropertyJsonFormat {
         isLive = dict["isLive"] as! Bool
         description = dict["description"] as! String
     
-    
     }
+    
 }
