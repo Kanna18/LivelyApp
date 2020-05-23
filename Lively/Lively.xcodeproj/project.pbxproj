@@ -48,6 +48,7 @@
 		A87A411024753A5200060DD6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87A410D24753A5100060DD6 /* Utils.swift */; };
 		A87A411124753A5200060DD6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87A410E24753A5100060DD6 /* Settings.swift */; };
 		A87A411224753A5200060DD6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87A410F24753A5200060DD6 /* SettingsTableViewController.swift */; };
+		A87B8B912478B12C007B8829 /* GlobalStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87B8B902478B12C007B8829 /* GlobalStoryBoard.swift */; };
 		A87E17922457EFDC00FB29F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87E17912457EFDC00FB29F0 /* AppDelegate.swift */; };
 		A87E17942457EFDC00FB29F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87E17932457EFDC00FB29F0 /* SceneDelegate.swift */; };
 		A87E17962457EFDC00FB29F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87E17952457EFDC00FB29F0 /* ViewController.swift */; };
@@ -102,6 +103,7 @@
 		A87A410D24753A5100060DD6 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A87A410E24753A5100060DD6 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		A87A410F24753A5200060DD6 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		A87B8B902478B12C007B8829 /* GlobalStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStoryBoard.swift; sourceTree = "<group>"; };
 		A87E178E2457EFDC00FB29F0 /* Lively.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lively.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A87E17912457EFDC00FB29F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A87E17932457EFDC00FB29F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				8F4A5ED024601AFB006AE281 /* ListTableViewCell.swift */,
 				8F4A5EE524614958006AE281 /* DetailViewController.swift */,
 				8F4A5EED2462FE37006AE281 /* DetailMapViewController.swift */,
+				A87B8B902478B12C007B8829 /* GlobalStoryBoard.swift */,
 				A87A411324753A6300060DD6 /* Twilio */,
 				A8EE0BC12474F36300FA0F38 /* Twilio */,
 				A87E17972457EFDC00FB29F0 /* Main.storyboard */,
@@ -417,6 +420,7 @@
 				A81E90A5245E67DA00260476 /* CityAnnotation.swift in Sources */,
 				A87A411024753A5200060DD6 /* Utils.swift in Sources */,
 				A840CA3C2457F96E0096528F /* MainViewController.swift in Sources */,
+				A87B8B912478B12C007B8829 /* GlobalStoryBoard.swift in Sources */,
 				A840CA3E2457F97E0096528F /* CitiesCollectionViewController.swift in Sources */,
 				A87A411124753A5200060DD6 /* Settings.swift in Sources */,
 				A87A411224753A5200060DD6 /* SettingsTableViewController.swift in Sources */,
@@ -569,6 +573,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VCLL7BM84V;
 				INFOPLIST_FILE = Lively/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -670,6 +675,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VCLL7BM84V;
 				INFOPLIST_FILE = Lively/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -16,8 +16,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var selectionSegment: UISegmentedControl!
     var mapRef : MapViewController?
     var citiVCRef : CitiesCollectionViewController?
-    var window :UIWindow = UIApplication.shared.keyWindow!
-    
+    var window :UIWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first!
+//    let window = UIApplication.shared.connectedScenes
+//    .filter({$0.activationState == .foregroundActive})
+//    .map({$0 as? UIWindowScene})
+//    .compactMap({$0})
+//    .first?.windows
+//    .filter({$0.isKeyWindow}).first
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,33 +30,13 @@ class MainViewController: UIViewController {
         let button = UIButton.init(type: .custom)
         
         button.frame = CGRect.init(x: window.frame.size.width/2 - 25, y: window.frame.size.height - 80, width: 50, height: 50)
-        button.setBackgroundImage(UIImage.init(named: "plus"), for: .normal)
+        button.setBackgroundImage(#imageLiteral(resourceName: "plus"), for: .normal)
         window.addSubview(button)
         window.windowLevel = UIWindow.Level(rawValue: 1)
         
         
-//       
-//        let coMotin = CMMotionActivityManager.init()
-//        coMotin.startActivityUpdates(to: .main) { (motionActivity) in
-//            print("\(String(describing: motionActivity))");
-//        }
-//        if CMMotionActivityManager.authorizationStatus() == .authorized{
-//            print("auth")
-//        }
-//        if CMMotionActivityManager.authorizationStatus() == .denied{
-//            print("denied")
-//            UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-//        }
-//        if CMMotionActivityManager.authorizationStatus() == .notDetermined{
-//            print("notDetermined")
-//        }
-//        if CMMotionActivityManager.authorizationStatus() == .restricted{
-//            print("restricted")
-//            /*Show an alert here and navigate to Settings*/
-//           UIApplication.shared.open(URL(string: "App-prefs:Privacy")!)
-//
-//        }
-
+        
+        button.backgroundColor = .red
     }
     
     

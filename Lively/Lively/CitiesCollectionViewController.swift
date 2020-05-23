@@ -109,7 +109,7 @@ class CitiesCollectionViewController: UIViewController, UICollectionViewDataSour
           // MARK: - UICollectionViewDelegate protocol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let obj = citiesArr[indexPath.row]
-               let listingsVC = self.storyboard?.instantiateViewController(identifier: "listingsVC") as! ListingsViewController
+        let listingsVC = GlobalStoryBoard().listingsViewController
                listingsVC.modalPresentationStyle = .fullScreen
                listingsVC.listingsCount = "\(String(obj.numberOfProperties)) Listings"
                self.present(listingsVC, animated: true, completion: nil)

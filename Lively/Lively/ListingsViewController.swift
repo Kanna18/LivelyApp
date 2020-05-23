@@ -60,7 +60,7 @@ class ListingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc  = self.storyboard?.instantiateViewController(identifier: "detailVC") as! DetailViewController
+        let vc  = GlobalStoryBoard().detailViewController
         vc.modalPresentationStyle = .fullScreen
         let obj = listArr[indexPath.row]
         vc.detailedObj = obj

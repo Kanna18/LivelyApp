@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func mapBtnAction(_ sender: Any) {
-        let detailMapVc = self.storyboard?.instantiateViewController(identifier: "detailMapVc") as! DetailMapViewController
+        let detailMapVc = GlobalStoryBoard().detailMapViewController
         detailMapVc.modalPresentationStyle = .fullScreen
         detailMapVc.detailedObj = detailedObj
         self.present(detailMapVc, animated: true, completion: nil)

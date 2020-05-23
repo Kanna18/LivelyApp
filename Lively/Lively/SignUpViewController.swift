@@ -29,7 +29,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signInBtn(_ sender: Any) {
-         let vc = self.storyboard?.instantiateViewController(identifier: "tabBarVC") as! UITabBarController
+        let vc = GlobalStoryBoard().tabBarVC
                vc.modalPresentationStyle = .fullScreen
                
                self.present(vc, animated: true, completion: nil)

@@ -27,14 +27,14 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func signInCLick(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(identifier: "tabBarVC") as! UITabBarController
+        let vc = GlobalStoryBoard().tabBarVC
         vc.modalPresentationStyle = .fullScreen
         
         self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func registerHereClick(_ sender: Any) {
-        let signVc = self.storyboard?.instantiateViewController(identifier: "signUpVc") as! SignUpViewController
+        let signVc = GlobalStoryBoard().signUpViewController
         signVc.modalPresentationStyle = .fullScreen
         
         self.present(signVc, animated: true, completion: nil)
