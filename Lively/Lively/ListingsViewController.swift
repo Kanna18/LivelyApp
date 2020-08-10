@@ -55,6 +55,7 @@ class ListingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ListTableViewCell
         let obj = listArr[indexPath.row]
+        cell.imgView.image = UIImage.init(named: "img\(indexPath.row + 1).jpg")
         cell.listTextV.text = "\(obj.flat) \(obj.street) \n \(obj.city) \(obj.cost)"
          return cell
     }

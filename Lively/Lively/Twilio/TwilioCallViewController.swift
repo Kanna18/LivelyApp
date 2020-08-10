@@ -15,7 +15,7 @@ class TwilioCallViewController: UIViewController {
     
     // Configure access token manually for testing, if desired! Create one manually in the console
     // at https://www.twilio.com/console/video/runtime/testing-tools
-    var accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzJiYWVkNTlhMTYyNjZiNmJkZjU4N2YzOWIxYzYxNjcxLTE1ODk5NjgyNjQiLCJpc3MiOiJTSzJiYWVkNTlhMTYyNjZiNmJkZjU4N2YzOWIxYzYxNjcxIiwic3ViIjoiQUMwZWNmNDExNzhkOWEyNjZkNWZjMjA5MzRjMDllZTFlNyIsImV4cCI6MTU4OTk3MTg2NCwiZ3JhbnRzIjp7ImlkZW50aXR5IjoiZGluZXNoIiwidmlkZW8iOnt9fX0.iJEcPRlnRkN5x359PgPeS1OX4Zh9wk9yjiqP5s_2RS0"
+    var accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzhiNjU4NjQwOGU2M2UxYzZjOTlmM2E2ZmQxMmZiYmQzLTE1OTEyNjMwMTEiLCJpc3MiOiJTSzhiNjU4NjQwOGU2M2UxYzZjOTlmM2E2ZmQxMmZiYmQzIiwic3ViIjoiQUNhZDIyMjgzZmQwZTVhNDI3NzEyNzQyMGExMWY0ZjlmMyIsImV4cCI6MTU5MTI2NjYxMSwiZ3JhbnRzIjp7ImlkZW50aXR5IjoiRGluZXNoIiwidmlkZW8iOnt9fX0.pJaZQpEE5wkl5VSUSh6DUg2eUEIEFhTTjmzS2Dwap7w"
   
     // Configure remote URL to fetch token from
     var tokenUrl = "http://localhost:8000/token.php"

@@ -17,6 +17,7 @@ class LiveTableViewCell: UITableViewCell {
         self.imgView.layer.cornerRadius = 5
         
         // Initialization code
+        callButton.layer.cornerRadius = 5
     }
     @IBOutlet weak var addressTv: UITextView!
     

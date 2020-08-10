@@ -25,7 +25,7 @@ class LiveViewController: UIViewController , UITableViewDelegate, UITableViewDat
     
 
     @objc func createARoom(sender:UIButton){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "TwilioViewController") as! TwilioCallViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "TwilioCallViewController") as! TwilioCallViewController
         let nav = UINavigationController.init(rootViewController: vc)
         self.present(nav, animated: true, completion: nil)
         
@@ -44,7 +44,7 @@ class LiveViewController: UIViewController , UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
          let cell = tableView.dequeueReusableCell(withIdentifier: liveCellIdentifier, for: indexPath) as! LiveTableViewCell
-    
+        cell.imgView.image = UIImage.init(named: "img\(indexPath.row + 1).jpg")
         cell.callButton.addTarget(self, action: #selector(createARoom(sender:)), for: .touchUpInside)
          return cell
     }

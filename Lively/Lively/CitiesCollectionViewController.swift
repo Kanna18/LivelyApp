@@ -94,7 +94,7 @@ class CitiesCollectionViewController: UIViewController, UICollectionViewDataSour
               let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! ListCollectionViewCell
 
             let obj = citiesArr[indexPath.row]
-            let image = UIImage(named: allImage[indexPath.row])
+            let image = UIImage.init(named: "img\(indexPath.row + 1).jpg")
             cell.imgView.image = image
             cell.backgroundColor = .red;
             cell.nameLablel.text = obj.name;
